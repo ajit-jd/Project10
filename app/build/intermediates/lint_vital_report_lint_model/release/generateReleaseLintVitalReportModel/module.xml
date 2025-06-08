@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="E:\Kotlin2\Project10\app"
+    name=":app"
+    type="APP"
+    maven="NoteApp:app:"
+    agpVersion="8.2.2"
+    buildFolder="build"
+    bootClassPath="E:\Android\SDK\platforms\android-34\android.jar;E:\Android\SDK\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

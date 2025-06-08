@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.2.2" type="incidents">
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="5"
+            endColumn="17"
+            endOffset="260"/>
+    </incident>
+
+    <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive roundIcon is missing a monochrome tag">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"
+            column="1"
+            startOffset="40"
+            endLine="5"
+            endColumn="17"
+            endOffset="260"/>
+    </incident>
+
+    <incident
+        id="KaptUsageInsteadOfKsp"
+        severity="warning"
+        message="This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp">
+        <show-url
+            description="Learn about how to enable KSP and use the KSP processor for this dependency instead"
+            url="https://developer.android.com/studio/build/migrate-to-ksp"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="66"
+            column="5"
+            startOffset="1887"
+            endLine="66"
+            endColumn="46"
+            endOffset="1928"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.16.0">
+        <fix-replace
+            description="Change to 1.16.0"
+            family="Update versions"
+            oldString="1.12.0"
+            replacement="1.16.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="54"
+            column="21"
+            startOffset="1189"
+            endLine="54"
+            endColumn="50"
+            endOffset="1218"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.7.0 is available: 2.9.1">
+        <fix-replace
+            description="Change to 2.9.1"
+            family="Update versions"
+            oldString="2.7.0"
+            replacement="2.9.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="55"
+            column="21"
+            startOffset="1241"
+            endLine="55"
+            endColumn="67"
+            endOffset="1287"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.activity:activity-compose than 1.8.2 is available: 1.10.1">
+        <fix-replace
+            description="Change to 1.10.1"
+            family="Update versions"
+            oldString="1.8.2"
+            replacement="1.10.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="56"
+            column="21"
+            startOffset="1310"
+            endLine="56"
+            endColumn="61"
+            endOffset="1350"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.0">
+        <fix-replace
+            description="Change to 2.9.0"
+            family="Update versions"
+            oldString="2.7.7"
+            replacement="2.9.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="62"
+            column="21"
+            startOffset="1664"
+            endLine="62"
+            endColumn="65"
+            endOffset="1708"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.7.1">
+        <fix-replace
+            description="Change to 2.7.1"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="63"
+            column="21"
+            startOffset="1731"
+            endLine="63"
+            endColumn="53"
+            endOffset="1763"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.7.1">
+        <fix-replace
+            description="Change to 2.7.1"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="64"
+            column="21"
+            startOffset="1786"
+            endLine="64"
+            endColumn="49"
+            endOffset="1814"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.11.0 is available: 1.12.0">
+        <fix-replace
+            description="Change to 1.12.0"
+            family="Update versions"
+            oldString="1.11.0"
+            replacement="1.12.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="65"
+            column="21"
+            startOffset="1837"
+            endLine="65"
+            endColumn="64"
+            endOffset="1880"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.7.1">
+        <fix-replace
+            description="Change to 2.7.1"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="66"
+            column="11"
+            startOffset="1893"
+            endLine="66"
+            endColumn="44"
+            endOffset="1926"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1">
+        <fix-replace
+            description="Change to 1.2.1"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.2.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="68"
+            column="32"
+            startOffset="2005"
+            endLine="68"
+            endColumn="61"
+            endOffset="2034"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1">
+        <fix-replace
+            description="Change to 3.6.1"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.6.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="69"
+            column="32"
+            startOffset="2068"
+            endLine="69"
+            endColumn="74"
+            endOffset="2110"/>
+    </incident>
+
+</incidents>

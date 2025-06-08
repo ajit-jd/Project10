@@ -1,0 +1,110 @@
+E:\Program_Files2\.gradle\caches\8.14\transforms\af7343e0d436040eb23798d1243e9f05\transformed\jetified-runtime-release\jars\lint.jar: Warning: Library lint checks reference invalid APIs; these checks will be skipped!
+
+Lint found an issue registry (androidx.compose.runtime.lint.RuntimeIssueRegistry)
+which contains some references to invalid API:
+org.jetbrains.kotlin.analysis.api.session.KtAnalysisSessionProvider: org.jetbrains.kotlin.analysis.api.lifetime.KtLifetimeTokenFactory getTokenFactory()
+(Referenced from androidx/compose/runtime/lint/AutoboxingStateCreationDetector.class)
+
+Therefore, this lint check library is not included
+in analysis. This affects the following lint checks:
+AutoboxingStateValueProperty
+AutoboxingStateCreation
+CoroutineCreationDuringComposition
+FlowOperatorInvokedInComposition
+ComposableLambdaParameterNaming
+ComposableLambdaParameterPosition
+ComposableNaming
+StateFlowValueCalledInComposition
+CompositionLocalNaming
+MutableCollectionMutableState
+ProduceStateDoesNotAssignValue
+RememberReturnType
+OpaqueUnitKey
+UnrememberedMutableState
+
+To use this lint check, upgrade to a more recent version
+of the library. [ObsoleteLintCustomCheck]
+
+   Explanation for issues of type "ObsoleteLintCustomCheck":
+   Lint can be extended with "custom checks": additional checks implemented by
+   developers and libraries to for example enforce specific API usages
+   required by a library or a company coding style guideline.
+
+   The Lint APIs are not yet stable, so these checks may either cause a
+   performance degradation, or stop working, or provide wrong results.
+
+   This warning flags custom lint checks that are found to be using obsolete
+   APIs and will need to be updated to run in the current lint environment.
+
+   It may also flag issues found to be using a newer version of the API,
+   meaning that you need to use a newer version of lint (or Android Studio or
+   Gradle plugin etc) to work with these checks.
+
+E:\Kotlin2\Project10\app\build.gradle.kts:54: Warning: A newer version of androidx.core:core-ktx than 1.12.0 is available: 1.16.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.12.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:55: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.7.0 is available: 2.9.1 [GradleDependency]
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:56: Warning: A newer version of androidx.activity:activity-compose than 1.8.2 is available: 1.10.1 [GradleDependency]
+    implementation("androidx.activity:activity-compose:1.8.2")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:62: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.7 is available: 2.9.0 [GradleDependency]
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:63: Warning: A newer version of androidx.room:room-runtime than 2.6.1 is available: 2.7.1 [GradleDependency]
+    implementation("androidx.room:room-runtime:2.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:64: Warning: A newer version of androidx.room:room-ktx than 2.6.1 is available: 2.7.1 [GradleDependency]
+    implementation("androidx.room:room-ktx:2.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:65: Warning: A newer version of com.google.android.material:material than 1.11.0 is available: 1.12.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.11.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:66: Warning: A newer version of androidx.room:room-compiler than 2.6.1 is available: 2.7.1 [GradleDependency]
+    kapt("androidx.room:room-compiler:2.6.1")
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:68: Warning: A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.2.1 [GradleDependency]
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\Kotlin2\Project10\app\build.gradle.kts:69: Warning: A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.6.1 [GradleDependency]
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+E:\Kotlin2\Project10\app\build.gradle.kts:66: Warning: This library supports using KSP instead of kapt, which greatly improves performance. Learn more: https://developer.android.com/studio/build/migrate-to-ksp [KaptUsageInsteadOfKsp]
+    kapt("androidx.room:room-compiler:2.6.1")
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "KaptUsageInsteadOfKsp":
+   KSP is a more efficient replacement for kapt. For libraries that support
+   both, KSP should be used to improve build times.
+
+   https://developer.android.com/studio/build/migrate-to-ksp
+
+E:\Kotlin2\Project10\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml:2: Warning: The application adaptive icon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+E:\Kotlin2\Project10\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml:2: Warning: The application adaptive roundIcon is missing a monochrome tag [MonochromeLauncherIcon]
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+^
+
+   Explanation for issues of type "MonochromeLauncherIcon":
+   If android:roundIcon and android:icon are both in your manifest, you must
+   either remove the reference to android:roundIcon if it is not needed; or,
+   supply the monochrome icon in the drawable defined by the android:roundIcon
+   and android:icon attribute.
+
+   For example, if android:roundIcon and android:icon are both in the
+   manifest, a launcher might choose to use android:roundIcon over
+   android:icon to display the adaptive app icon. Therefore, your themed
+   application iconwill not show if your monochrome attribute is not also
+   specified in android:roundIcon.
+
+0 errors, 14 warnings
