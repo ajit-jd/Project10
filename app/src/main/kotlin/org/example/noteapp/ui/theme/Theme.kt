@@ -16,11 +16,19 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = BrightBlueButton,       // For "New Note" FAB, AppBar
+    secondary = DarkerBlueButton,     // For "Clip Webpage" FAB
+    tertiary = BrightBlueButton,      // Can be same as primary or another accent
+    background = NavyBlue,
+    surface = NavyBlue,
+    onPrimary = LightColorText,
+    onSecondary = LightColorText,
+    onTertiary = LightColorText,
+    onBackground = LightColorText,
+    onSurface = LightColorText
 )
 
+// LightColorScheme remains as is for now, but won't be used by default.
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
     secondary = PurpleGrey40,
@@ -29,24 +37,22 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun NoteAppTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = true,
+    // darkTheme: Boolean = isSystemInDarkTheme(), // Forced to true
+    // dynamicColor: Boolean = true, // Dynamic color disabled for now
     content: @Composable () -> Unit
 ) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
-    }
+    // Force dark theme
+    val darkTheme = true
+    val colorScheme = DarkColorScheme // Always use the new DarkColorScheme
+
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
+            // Set status bar color to match the primary color of the dark theme (BrightBlueButton)
             window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+            // Ensure status bar icons are light for dark theme
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = false
         }
     }
 
